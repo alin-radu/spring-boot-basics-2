@@ -19,6 +19,21 @@ Content-Type: application/json
   "url": ""
 }
 
+### create new content without a title;
+POST http://localhost:8080/api/content
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "",
+  "desc": "My Second blog post",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2024-12-30T17:24:42.382419",
+  "dateUpdated": null,
+  "url": ""
+}
+
 ### update existing content;
 PUT http://localhost:8080/api/content/1
 Content-Type: application/json
