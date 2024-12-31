@@ -9,9 +9,8 @@ POST http://localhost:8080/api/content
 Content-Type: application/json
 
 {
-  "id": 2,
   "title": "My Second Blog Post",
-  "desc": "My Second blog post",
+  "description": "My Second blog post",
   "status": "IDEA",
   "contentType": "ARTICLE",
   "dateCreated": "2024-12-30T17:24:42.382419",
@@ -24,9 +23,8 @@ POST http://localhost:8080/api/content
 Content-Type: application/json
 
 {
-  "id": 2,
   "title": "",
-  "desc": "My Second blog post",
+  "description": "My Second blog post",
   "status": "IDEA",
   "contentType": "ARTICLE",
   "dateCreated": "2024-12-30T17:24:42.382419",
@@ -41,7 +39,7 @@ Content-Type: application/json
 {
   "id": 1,
   "title": "My First Blog Post | Modified !!!",
-  "desc": "My First blog post was edited",
+  "description": "My First blog post was edited",
   "status": "IDEA",
   "contentType": "ARTICLE",
   "dateCreated": "2024-12-30T17:24:42.382419",
@@ -56,7 +54,7 @@ Content-Type: application/json
 {
   "id": 999,
   "title": "My Second Blog Post Edited",
-  "desc": "My Second blog post was edited",
+  "description": "My Second blog post was edited",
   "status": "IDEA",
   "contentType": "ARTICLE",
   "dateCreated": "2024-12-30T17:24:42.382419",
