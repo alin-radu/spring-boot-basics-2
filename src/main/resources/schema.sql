@@ -11,4 +11,4 @@ CREATE TABLE IF NOT EXISTS Content (
 
 
 INSERT INTO Content (title, description, status, content_type, date_created)
-VALUES ('My Blog Post', 'My First blog post executed from Spring Data JDBC', 'IDEA', 'ARTICLE', CURRENT_TIMESTAMP);
+VALUES ('My Blog Post, from Spring Data JDBC', 'My First blog post executed from Spring Data JDBC', 'IDEA', 'ARTICLE', CURRENT_TIMESTAMP);

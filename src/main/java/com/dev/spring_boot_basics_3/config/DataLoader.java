@@ -20,12 +20,12 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("You could insert some data in the DB. | DataLoader");
-        ;
+
         Content content = new Content(
                 null,
-                "My Blog Post",
+                "My Blog Post, from DataLoader",
                 "My First blog post executed from DataLoader",
-                Status.IDEA,
+                Status.COMPLETED,
                 Type.ARTICLE,
                 LocalDateTime.now(),
                 null,

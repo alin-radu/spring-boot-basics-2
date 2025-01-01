@@ -25,27 +25,26 @@ public class Application {
 
             Content content = new Content(
                     null,
-                    "My Blog Post",
+                    "My Blog Post, from CommandLineRunner",
                     "My First blog post executed from CommandLineRunner",
-                    Status.IDEA,
+                    Status.IN_PROGRESS,
                     Type.ARTICLE,
                     LocalDateTime.now(),
                     null,
                     "");
 
             repository.save(content);
-
         };
     }
-
 }
 
 //public static void main(String[] args) {
 //    ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
 //
 //    AtomicInteger count = new AtomicInteger(1);
-//    Arrays.stream(context.getBeanDefinitionNames()).forEach((item) -> {
-//        System.out.println(count + ". " + item);
-//        count.getAndIncrement();
-//    });
+//    Arrays.stream(context.getBeanDefinitionNames())
+//            .forEach((item) -> {
+//                System.out.println(count + ". " + item);
+//                count.getAndIncrement();
+//            });
 //}

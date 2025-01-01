@@ -1,6 +1,7 @@
 package com.dev.spring_boot_basics_3.controller;
 
 import com.dev.spring_boot_basics_3.model.Content;
+import com.dev.spring_boot_basics_3.model.Status;
 import com.dev.spring_boot_basics_3.repository.ContentRepository;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -24,15 +25,15 @@ import java.util.List;
 @CrossOrigin
 public class ContentController {
 
-//    private final ContentJdbcTemplateRepository repository;
-//
-//    public ContentController(ContentJdbcTemplateRepository repository) {
-//        this.repository = repository;
-//    }
-
 //    private final ContentCollectionRepository repository;
 //
 //    public ContentController(ContentCollectionRepository repository) {
+//        this.repository = repository;
+//    }
+
+//    private final ContentJdbcTemplateRepository repository;
+//
+//    public ContentController(ContentJdbcTemplateRepository repository) {
 //        this.repository = repository;
 //    }
 
@@ -83,6 +84,14 @@ public class ContentController {
         repository.deleteById(id);
     }
 
+    @GetMapping("/filter/{keyword}")
+    public List<Content> findByTitle(@PathVariable String keyword) {
+        return repository.findAllByTitleContains(keyword);
+    }
 
-
+    @GetMapping("/filter/status/{status}")
+    public List<Content> findAllByStatus(@PathVariable Status status) {
+        System.out.println(status);
+        return repository.findAllByStatus(status);
+    }
 }
