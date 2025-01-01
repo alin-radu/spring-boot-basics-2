@@ -1,5 +1,6 @@
 package com.dev.spring_boot_basics_3;
 
+import com.dev.spring_boot_basics_3.config.ContentCalendarProperties;
 import com.dev.spring_boot_basics_3.model.Content;
 import com.dev.spring_boot_basics_3.model.Status;
 import com.dev.spring_boot_basics_3.model.Type;
@@ -7,11 +8,14 @@ import com.dev.spring_boot_basics_3.repository.ContentRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
 import java.time.LocalDateTime;
 
+@EnableConfigurationProperties(ContentCalendarProperties.class)
 @SpringBootApplication
+
 public class Application {
 
     public static void main(String[] args) {
